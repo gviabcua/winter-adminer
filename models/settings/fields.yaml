@@ -1,0 +1,87 @@
+tabs:
+    fields:
+
+        ########################################################################
+        # General Tab
+        ########################################################################
+        mode_section:
+            tab    : gviabcua.adminer::lang.settings.tabs.general
+            label  : gviabcua.adminer::lang.settings.mode
+            comment: gviabcua.adminer::lang.settings.mode_comment
+            type   : section
+
+        mode:
+            tab     : gviabcua.adminer::lang.settings.tabs.general
+            type    : balloon-selector
+            default : 1
+            options :
+                1: gviabcua.adminer::lang.settings.full_window
+                2: gviabcua.adminer::lang.settings.iframe
+
+        autologin_section:
+            tab     : gviabcua.adminer::lang.settings.tabs.general
+            label   : gviabcua.adminer::lang.settings.autologin
+            comment : gviabcua.adminer::lang.settings.autologin_comment
+            type    : section
+            cssClass: m-t-md
+
+        autologin:
+            tab    : gviabcua.adminer::lang.settings.tabs.general
+            span   : left
+            type   : switch
+            default: false
+
+        hide_menu_section:
+            tab     : gviabcua.adminer::lang.settings.tabs.general
+            label   : gviabcua.adminer::lang.settings.hide_menu
+            comment : gviabcua.adminer::lang.settings.hide_menu_comment
+            type    : section
+            cssClass: m-t-md
+
+        hide_menu:
+            tab    : gviabcua.adminer::lang.settings.tabs.general
+            span   : left
+            type   : switch
+            default: false
+
+        hide_menu_link:
+            tab    : gviabcua.adminer::lang.settings.tabs.general
+            span   : left
+            type   : partial
+            path   : $/gviabcua/adminer/models/settings/_adminer_link.htm
+            trigger:
+                action   : show
+                field    : hide_menu
+                condition: checked
+
+        ########################################################################
+        # Themes Tab
+        ########################################################################
+        themes_section:
+            tab     : gviabcua.adminer::lang.settings.tabs.themes
+            label   : gviabcua.adminer::lang.settings.themes
+            comment : gviabcua.adminer::lang.settings.themes_comment
+            type    : section
+
+        theme:
+            tab    : gviabcua.adminer::lang.settings.tabs.themes
+            type   : partial
+            path   : $/gviabcua/adminer/models/settings/_themes_preview.htm
+            default: ""
+
+        ########################################################################
+        # Advanced Tab
+        ########################################################################
+        use_connection_section:
+            tab        : gviabcua.adminer::lang.settings.tabs.advanced
+            label      : gviabcua.adminer::lang.settings.use_conn
+            comment    : gviabcua.adminer::lang.settings.use_conn_comment
+            commentHtml: true
+            type       : section
+
+        use_connection:
+            tab       : gviabcua.adminer::lang.settings.tabs.advanced
+            span      : left
+            type      : dropdown
+            default   : ""
+            showSearch: false
